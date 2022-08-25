@@ -7,5 +7,5 @@ export class Zone {
   nom?:String;
   annonces?:Annonce[]
   //TODO: add list of arrets
-
+ 
 }
