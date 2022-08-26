@@ -7,5 +7,8 @@ export class Client extends Utilisateur {
 numeroDeTelephone?:string;
 annonces?: Annonce[];
 
+constructor(){
+  super();
+}
 
 }
