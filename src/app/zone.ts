@@ -5,7 +5,7 @@ export class Zone {
 
 
   id?:number;
-  nom?:String;
+  nom?:string;
   annonces?:Annonce[];
   arrets?:Arret[];
 
