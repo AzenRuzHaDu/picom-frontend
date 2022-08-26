@@ -1,16 +1,22 @@
+import { Client } from "./client";
+import { TrancheHorraire } from "./tranche-horraire";
+import { Zone } from "./zone";
+
 export class Annonce {
 
   id?:number;
   dateHeureCreation?:Date;
   dateHeureDebut?:Date;
   dateHeurefin?:Date;
-  contenu?:String;
-  titre?:String;
-  numeroCarte?:String;
+  contenu?:string;
+  titre?:string;
+  numeroCarte?:string;
   anneExpiration?:number;
   moisExpiration?:number;
-  cryptogramme?:String;
+  cryptogramme?:string;
   montantRegleEnEuros?:number;
-//TODO: add List of Zone tranche horraires & add one client
+  client?:Client;
+  zones?:Zone[];
+  tranchehorraires?:TrancheHorraire[];
 
 }
