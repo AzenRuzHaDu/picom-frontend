@@ -1,12 +1,22 @@
-<section class="card connection-card">
-  <form class="form-center" #coForm="ngForm"  action="post">
+<section class="card inscription-card">
+  <form class="form-center inscription-form"  action="post">
 
-    <h1 class="form-title">Se connecter</h1>
+  <h1 class="form-title">Créer un compte</h1>
+<section class="form-content">
+  <input type="text"  class="input nom" name="nom" placeholder="Nom" >
+
+  <input type="text"  class="input prénom" name="prénom" placeholder="Prénom" >
 
   <input type="email"  class="input mail" name="email" placeholder="Adresse email" >
 
   <input type="password" class="input password" name="password" placeholder="Mot de passe">
-  <input class="btn-main submit" type="submit" value="Se connecter">
+
+  <input type="password" class="input password" name="password-confirm" placeholder="Confirmation du mot de passe">
+
+  <input type="tel" class="input tel" name="tel" placeholder="Numéro de téléphone">
+
+</section>
+  <input class="btn-main submit" type="submit" value="S'inscrire">
 
   </form>
   </section>

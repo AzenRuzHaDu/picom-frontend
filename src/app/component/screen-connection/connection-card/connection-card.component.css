@@ -1,5 +1,5 @@
 .connection-card {
-
+  background: #F3F3FA;
   position: absolute;
   width: 25%;
   height: 50%;
@@ -10,12 +10,15 @@
 
 .form-title {
   position: absolute;
-  top: 20%;
+  top: 15%;
 }
 
 .submit {
   position: absolute;
   bottom: 20%;
 }
+
+
+
 
 
