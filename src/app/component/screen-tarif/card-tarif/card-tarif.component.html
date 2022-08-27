@@ -1,0 +1,17 @@
+<p>card-tarif works!</p>
+<section class="card tarif-card">
+    <form class="form-center" #coForm="ngForm" (ngSubmit)="onSubmit(coForm)" action="post">
+    
+      <h1 class="form-title">Tarif</h1>
+    
+    <input type="text"  class="input" name="zone" placeholder="zone" [(ngModel)]="zone">
+    
+    <input type="input" class="input" name="tranche" placeholder="tranche"[(ngModel)]="tranche">
+
+    <input type="input" class="input" name="tarif" placeholder="tarif"[(ngModel)]="tarif">
+    
+    <input class="btn-main submit" type="submit" value="Valider">
+    
+    </form>
+    </section>
+    

@@ -1,0 +1,15 @@
+
+<section class="card connection-card">
+<form class="form-center" #coForm="ngForm" (ngSubmit)="onSubmit(coForm)" action="post">
+
+  <h1 class="form-title">Se connecter</h1>
+
+<input type="email"  class="input mail" name="email" placeholder="Adresse email" [(ngModel)]="email">
+
+<input type="password" class="input password" name="password" placeholder="Mot de passe"[(ngModel)]="motDePasse">
+<input class="btn-main submit" type="submit" value="Se connecter">
+
+</form>
+</section>
+
+

@@ -1,0 +1,42 @@
+.inscription-card {
+  /* z-index: 1; */
+  position: absolute;
+  width: 28%;
+  height: 80%;
+  top: 10%;
+  transform: translate(180%, 0%);
+  background: linear-gradient(180deg, #EEEEF7 72.92%, #EAEAF5 100%);
+/* shadow-card-second */
+
+box-shadow: 0px 8px 15px 2px rgba(124, 115, 151, 0.25);
+border-radius: 20px;
+}
+
+.inscription-form, .inscription-card, .form-title {
+  background: linear-gradient(180deg, #EEEEF7 72.92%, #EAEAF5 100%);
+
+}
+
+.form-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5%;
+}
+
+.input {
+  margin: 10%;
+  width: 150%;
+}
+
+.submit{
+  position: absolute;
+  bottom: 10%;
+}
+
+.form-title {
+  position: absolute;
+  top: 6%;
+}
