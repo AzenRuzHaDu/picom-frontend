@@ -1,8 +1,12 @@
 <p>liste-tarif works!</p>
 <section class="card liste-tarif">
     <h1 class="form-title">Liste des tarifs</h1>
-    <div *ngFor="let t of tarifs">
-        <app-detail-tarif-card></app-detail-tarif-card>    
+    <div class = "tarif-card">
+        <app-detail-tarif-card
+            *ngFor="let t of tarifs"
+            [tarifs]="t"
+           >
+        </app-detail-tarif-card>    
     </div>
     
     

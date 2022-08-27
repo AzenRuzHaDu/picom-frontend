@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Tarif } from 'src/app/business/tarif';
 
@@ -11,7 +11,10 @@ import { Tarif } from 'src/app/business/tarif';
 })
 export class DetailTarifCardComponent implements OnInit {
   
-
+  //
+  
+  @Input()
+  tarifs!: Tarif;
   
 
 

@@ -7,7 +7,14 @@ export class Tarif {
   id?:number;
   prixEnEuros?:number;
   trancheHorraire?:number;
-  zone?:Zone;
+  zone?:number;
   administrateur?:Administrateur;
 
+  constructor(prixEnEuros:number, trancheHorraire:number, zone:number ){
+    this.prixEnEuros = prixEnEuros;
+    this.trancheHorraire = trancheHorraire;
+    this.zone = zone;
+    
+
+  }
 }

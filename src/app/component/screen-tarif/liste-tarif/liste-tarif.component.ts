@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tarif } from 'src/app/business/tarif';
 
 @Component({
   selector: 'app-liste-tarif',
@@ -6,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-tarif.component.css']
 })
 export class ListeTarifComponent implements OnInit {
-  public tarifs: Array<{zone: String, trancheHorraire: String, prixEnEuros: number} >=
-  [
-    {zone: "zone1", trancheHorraire: "tranche1", prixEnEuros: 20},
-    {zone: "zone1", trancheHorraire: "tranche2", prixEnEuros: 40},
-    {zone: "zone1", trancheHorraire: "tranche3", prixEnEuros: 60},
-    
-  ]
-  constructor() { }
+  @Input()
+  tarifs: Tarif[];
+  
+ 
+  constructor() { 
+    this.tarifs = [
+      new Tarif(20,2,1),
+      new Tarif(40,2,1),
+      new Tarif(60,2,1)
+    ]
+  }
+  
 
+
+  
   ngOnInit(): void {
   }
 

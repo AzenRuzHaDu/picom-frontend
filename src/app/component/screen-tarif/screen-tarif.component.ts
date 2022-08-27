@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-screen-tarif',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./screen-tarif.component.css']
 })
 export class ScreenTarifComponent implements OnInit {
-
+ 
+ 
   constructor() { }
 
   ngOnInit(): void {
