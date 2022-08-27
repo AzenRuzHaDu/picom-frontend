@@ -13,6 +13,9 @@ import { CardTarifComponent } from './component/screen-tarif/card-tarif/card-tar
 import { ListeTarifComponent } from './component/screen-tarif/liste-tarif/liste-tarif.component';
 import { DetailTarifCardComponent } from './component/screen-tarif/liste-tarif/detail-tarif-card/detail-tarif-card.component';
 import { InscriptionCardComponent } from './component/screen-connection/inscription-card/inscription-card.component';
+import { ScreenListAnnoncesComponent } from './component/screen-list-annonces/screen-list-annonces.component';
+import { ListAnnonceComponent } from './component/screen-list-annonces/list-annonce/list-annonce.component';
+import { AnnonceCardComponent } from './component/screen-list-annonces/list-annonce/annonce-card/annonce-card.component';
 
 
 
@@ -26,6 +29,9 @@ import { InscriptionCardComponent } from './component/screen-connection/inscript
     ListeTarifComponent,
     DetailTarifCardComponent,
     InscriptionCardComponent,
+    ScreenListAnnoncesComponent,
+    ListAnnonceComponent,
+    AnnonceCardComponent,
   ],
   imports: [
     BrowserModule,
