@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Tarif } from 'src/app/business/tarif';
+
+
 
 @Component({
   selector: 'app-detail-tarif-card',
@@ -6,10 +10,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-tarif-card.component.css']
 })
 export class DetailTarifCardComponent implements OnInit {
+  
 
-  constructor() { }
+  
+
+
+  constructor() {
+
+    
+
+    
+   }
 
   ngOnInit(): void {
+
+
+    
+
+
   }
+  
 
 }

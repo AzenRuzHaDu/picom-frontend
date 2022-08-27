@@ -1,0 +1,19 @@
+.tarif-card {
+    background: #F3F3FA;
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    top: 25%;
+    transform: translate(-150%, 10%);
+    box-shadow: 2px 15px 15px 2px #d1d1e9;
+  }
+  
+  .form-title {
+    position: absolute;
+    top: 15%;
+  }
+  
+  .submit {
+    position: absolute;
+    bottom: 20%;
+  }
