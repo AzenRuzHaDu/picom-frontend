@@ -1,0 +1,21 @@
+.connection-card {
+
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  top: 25%;
+  transform: translate(110%, 0%);
+  box-shadow: 12px 15px 15px 2px #d1d1e9;
+}
+
+.form-title {
+  position: absolute;
+  top: 20%;
+}
+
+.submit {
+  position: absolute;
+  bottom: 20%;
+}
+
+
