@@ -9,16 +9,15 @@ import { Client } from '../business/client';
 })
 export class HttpclientserviceService {
 
-  client: Client = new Client();
+  constructor(private clientHttp: HttpClient) {}
 
-  constructor(private clientHttp: HttpClient) {
+  getAll(pathEnd: string): Observable<any[]>{
+    // TODO document why this method 'getAll' is empty
+return this.clientHttp.get<any[]>(`http://localhost:8080/api/${pathEnd}`)
 
   }
 
-  clientPost(client:Client) {
-return this.clientHttp.post<Client>('https://localhost:8081/api/connection', client).subscribe(data => {
-this.client = data;
-})
 
-}
+
+
 }
