@@ -1,0 +1,38 @@
+.list{
+  position: absolute;
+  top: 10%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  width: 30%;
+  z-index: 1;
+  height: 99vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+.annonces-title{
+margin-top: 5%;
+position: relative;
+width: 73%;
+left: 10%;
+background: #F6F6FF;
+box-shadow: 5px 5px 5px 0.5px rgba(209, 209, 233, 0.2);
+border-radius: 25px;
+}
+
+.add-annonce {
+  position: relative;
+  left: 5%;
+}
+
+

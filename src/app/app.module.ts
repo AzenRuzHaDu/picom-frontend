@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 
+import { QuillModule} from 'ngx-quill';
 
 import { AppComponent } from './component/app.component';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +17,7 @@ import { InscriptionCardComponent } from './component/screen-connection/inscript
 import { ScreenListAnnoncesComponent } from './component/screen-list-annonces/screen-list-annonces.component';
 import { ListAnnonceComponent } from './component/screen-list-annonces/list-annonce/list-annonce.component';
 import { AnnonceCardComponent } from './component/screen-list-annonces/list-annonce/annonce-card/annonce-card.component';
+import { MapComponent } from './component/screen-list-annonces/map/map.component';
 
 
 
@@ -32,12 +34,14 @@ import { AnnonceCardComponent } from './component/screen-list-annonces/list-anno
     ScreenListAnnoncesComponent,
     ListAnnonceComponent,
     AnnonceCardComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

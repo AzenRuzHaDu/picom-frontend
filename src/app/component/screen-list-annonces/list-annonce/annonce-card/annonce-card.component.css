@@ -1,0 +1,21 @@
+.annonce{
+width: 70%;
+position: relative;
+left: 10%;
+background: #F6F6FF;
+box-shadow: 5px 5px 5px 0.5px rgba(209, 209, 233, 0.2);
+border-radius: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-top: 10px;
+text-align: center;
+padding: 5px;
+box-shadow: 1px 1px 1px 1px #dcdce8;
+}
+
+.annonce:hover{
+  cursor: pointer;
+  border: #6161d7 solid 0.2ch;
+}
