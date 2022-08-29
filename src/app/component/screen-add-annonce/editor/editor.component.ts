@@ -7,6 +7,9 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
   styleUrls: ['./editor.component.css'],
 })
 export class EditorComponent implements OnInit {
+
+  annonceContent!:string;
+
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -18,7 +21,7 @@ export class EditorComponent implements OnInit {
     translate: 'yes',
     enableToolbar: true,
     showToolbar: true,
-    placeholder: 'Enter text here...',
+    placeholder: 'Ecrivez le contenu de votre annonce',
     defaultParagraphSeparator: '',
     defaultFontName: '',
     defaultFontSize: '',
@@ -43,14 +46,20 @@ export class EditorComponent implements OnInit {
         tag: 'h1',
       },
     ],
-    uploadUrl: 'v1/image',
-    uploadWithCredentials: false,
     sanitize: true,
     toolbarPosition: 'top',
-    toolbarHiddenButtons: [['bold', 'italic'], ['fontSize']],
+    toolbarHiddenButtons: [  ['insertImage',
+    'insertVideo'], ['fontSize']],
+
   };
 
+
+
   ngOnInit(): void {
-   
+
+  }
+
+  submit(form:NgForm){
+    console.log(form.value.annonceContent);
   }
 }

@@ -3,9 +3,9 @@ import { Arret } from "./arret";
 
 export class Zone {
 
-  id?:number;
-  nom?:string;
-  annonces?:Annonce[];
-  arrets?:Arret[];
+  id!:number;
+  nom!:string;
+  annonces!:Annonce[];
+  arrets!:Arret[];
 
 }

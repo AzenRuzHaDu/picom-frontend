@@ -4,8 +4,8 @@ import { Utilisateur } from "./utilisateur";
 export class Client extends Utilisateur {
 
 
-numeroDeTelephone?:string;
-annonces?: Annonce[];
+numeroDeTelephone!:string;
+annonces!: Annonce[];
 
 constructor(){
   super();

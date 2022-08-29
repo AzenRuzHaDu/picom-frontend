@@ -16,6 +16,7 @@ export class AnnonceCardComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    console.log(this.annonce);
   }
 
 }

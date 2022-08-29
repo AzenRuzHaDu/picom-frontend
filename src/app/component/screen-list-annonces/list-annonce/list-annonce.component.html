@@ -3,8 +3,8 @@
 <button class="btn-main add-annonce">+</button>
 </div>
 
-<app-annonce-card *ngFor="let a of annonces"
+<app-annonce-card *ngFor="let a of annonces$ | async"
 [annonce]="a"></app-annonce-card>
 
- 
+
 </div>

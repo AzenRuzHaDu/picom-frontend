@@ -12,7 +12,11 @@ export class UtilisateurService {
   constructor(private http: HttpclientserviceService) { }
 
 getClients(utilisateur : Utilisateur): Observable<Utilisateur> {
-return this.http.getOne('utilisateurs',utilisateur.id); 
+return this.http.getOne('utilisateurs',utilisateur.id);
+}
+
+getOne(){
+return this.http.getOne('annonces',3);
 }
 
 

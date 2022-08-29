@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Annonce } from 'src/app/business/annonce';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
 @Component({
   selector: 'app-list-annonce',
@@ -8,13 +10,14 @@ import { Annonce } from 'src/app/business/annonce';
 })
 export class ListAnnonceComponent implements OnInit {
 
-annonces!:Annonce[];
+annonces$!: Observable<Annonce[]>;
 
-  constructor() { }
+  constructor(private user:UtilisateurService) { }
 
 
 
   ngOnInit(): void {
+    this.annonces$ = this.user.getOne();
   }
 
 }

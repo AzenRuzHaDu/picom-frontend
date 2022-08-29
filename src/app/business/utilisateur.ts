@@ -1,7 +1,8 @@
 export class Utilisateur {
   id!: number;
-  nom?: string;
-  prenom?: string;
-  email?: string;
-  motDePasse?: string;
+  motDePasse!: string;
+  nom!: string;
+  prenom!: string;
+  email!: string;
+
 }

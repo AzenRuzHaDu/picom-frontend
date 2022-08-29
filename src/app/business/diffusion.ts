@@ -3,9 +3,9 @@ import { Arret } from "./arret";
 
 export class Diffusion {
 
-  id?:number;
-  dateHeureDiffusion?:Date;
-  arret?:Arret;
-  annonce?:Annonce;
-  
+  id!:number;
+  dateHeureDiffusion!:Date;
+  arret!:Arret;
+  annonce!:Annonce;
+
 }

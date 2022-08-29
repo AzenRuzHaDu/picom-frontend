@@ -9,14 +9,16 @@ import { HttpclientserviceService } from './httpclientservice.service';
 })
 export class TarifService {
 
-  tarifs$!: Observable<Tarif[]>;
+  // tarifs$!: Observable<Tarif[]>;
 
   constructor(private http: HttpclientserviceService) {}
 
   getTarifs(): Observable<Tarif[]> {
 // return this.tarifs$ = this.http.getAll('tarifs');
-return this.http.getAll('tarifs'); 
+return this.http.getAll('tarifs');
   }
+
+
 
 
 
