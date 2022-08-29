@@ -3,12 +3,8 @@
 <button class="btn-main add-annonce">+</button>
 </div>
 
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
-<app-annonce-card ></app-annonce-card>
+<app-annonce-card *ngFor="let a of annonces"
+[annonce]="a"></app-annonce-card>
 
+ 
 </div>

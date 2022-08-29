@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Annonce } from 'src/app/business/annonce';
 
 @Component({
   selector: 'app-annonce-card',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnnonceCardComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  annonce!:Annonce;
+
+  constructor() {
+
+   }
 
   ngOnInit(): void {
   }

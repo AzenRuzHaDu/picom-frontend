@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
+import { Tarif } from '../business/tarif';
 
 
 @Injectable({
@@ -12,12 +13,12 @@ export class HttpclientserviceService {
 
   getAll(pathToApi: string): Observable<any[]>{
     // TODO document why this method 'getAll' is empty
-return this.clientHttp.get<any[]>(`http://localhost:8080/api/${pathToApi}`)
+return this.clientHttp.get<any[]>(`http://localhost:8180/api/${pathToApi}`)
 
   }
 
-  getOne(pathToAPI: string, objectId: string): Observable<any> {
-    return this.clientHttp.get<any>(`http://localhost:8080/api/${pathToAPI}/${objectId}`).pipe(
+  getOne(pathToAPI: string, objectId: number): Observable<any> {
+    return this.clientHttp.get<any>(`http://localhost:8180/api/${pathToAPI}/${objectId}`).pipe(
       catchError((error) => this.handleError(error, undefined))
     );
   }
@@ -28,7 +29,7 @@ return this.clientHttp.get<any[]>(`http://localhost:8080/api/${pathToApi}`)
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     }
 
-    return this.clientHttp.post<any>(`http://localhost:8080/api/${objectToAdd}`, objectToAdd, httpOptions).pipe(
+    return this.clientHttp.post<any>(`http://localhost:8180/api/${objectToAdd}`, objectToAdd, httpOptions).pipe(
       catchError((error) => this.handleError(error, undefined))
     );
   }

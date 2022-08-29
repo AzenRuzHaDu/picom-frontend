@@ -6,12 +6,7 @@ import { AngularEditorConfig } from '@kolkov/angular-editor';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css'],
 })
-
 export class EditorComponent implements OnInit {
-
-
-
-
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -56,6 +51,6 @@ export class EditorComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+   
   }
 }

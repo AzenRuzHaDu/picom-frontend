@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Annonce } from 'src/app/business/annonce';
 
 @Component({
   selector: 'app-list-annonce',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListAnnonceComponent implements OnInit {
 
+annonces!:Annonce[];
+
   constructor() { }
+
+
 
   ngOnInit(): void {
   }
