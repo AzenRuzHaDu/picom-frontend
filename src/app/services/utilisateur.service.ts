@@ -20,5 +20,8 @@ getAnnonces() : Observable<Annonce[]>{
 return this.http.getOne('annonces',3);
 }
 
+sendAnnonce(annonce:Annonce) : Observable<Annonce>{
+return this.http.addOne(annonce,"Annonce")
+}
 
 }

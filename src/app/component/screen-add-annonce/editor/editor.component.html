@@ -1,39 +1,80 @@
 <form #form="ngForm" (ngSubmit)="submit(form)">
-<div class="info-annonce">
-  <div class="">
-    <label for="titre"></label>
-    <input type="text" name="titre" placeholder="Titre" autocomplete="off" />
+  <div class="info-annonce">
+    <div>
+      <label for="titre"></label>
+      <input
+        type="text"
+        name="titre"
+        placeholder="Titre"
+        autocomplete="off"
+        [(ngModel)]="this.annonce.titre"
+      />
+    </div>
+    <div>
+      <label for="select">
+        <select name="select" id="select" multiple>
+          <optgroup
+            *ngFor="let th of tranchesHoraires$ | async"
+            label="{{ th.debut }} h"
+          >
+            <option
+              *ngFor="let z of zones$ | async"
+              label="{{ z.nom }}"
+              (click)="pushZoneandTH(z, th)"
+            ></option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+    <div>
+      <input
+        type="date"
+        name="dateHeureDebut"
+        [(ngModel)]="this.annonce.dateHeureDebut"
+      />
+    </div>
+    <div>
+      <input
+        type="date"
+        name="dateHeurefin"
+        id=""
+        [(ngModel)]="this.annonce.dateHeurefin"
+      />
+    </div>
   </div>
-  <div>
-    <label for="select">
-    <select name="select" id="select" multiple>
-        <optgroup *ngFor="let th of tranchesHoraires$ | async" label="{{th.debut}} h">
+  <angular-editor
+    name="contenu"
+    id="editor1"
+    [config]="editorConfig"
+    [(ngModel)]="this.annonce.contenu"
+  ></angular-editor>
+  <button id="" class="g btn-main btn-submit" (click)="toogle()">Valider</button>
+  <br />
+  <br />
+  <div class="toogle tg g" (click)="toogle()">
+    <div>
+      <div>
+        <label for="cardNumber">Card Number</label><br />
+        <input name="cardNumber" maxlength="16" [(ngModel)]="this.annonce.numeroCarte" />
+      </div>
+    </div>
+    <div class="">
+      <div>
+        <label for="CVV">CVV</label> <br />
+        <input name="CVV" maxlength="16" [(ngModel)]="this.annonce.cryptogramme" />
+      </div>
+    </div>
+    <div class="">
+      <div>
+        <label for="exptMonth">Date d'expiration</label><br />
+        <input name="exptMonth" maxlength="16" [(ngModel)]="this.annonce.moisExpiration"/>
+      </div>
+      <div>
+        <label for="exptYear">Date d'expiration</label><br />
+        <input name="exptYear" maxlength="16" [(ngModel)]="this.annonce.anneExpiration"/>
+      </div>
+    </div>
 
-            <option *ngFor="let z of zones$ |async">{{z.nom}}</option>
-      </optgroup>
-      </select>
-    </label>
   </div>
-  <div>
-    <input type="date" [(ngModel)]="contenu"/>
-  </div>
-  <div>
-    <input type="date" name="" id="" />
-  </div>
-</div>
-<angular-editor name="contenu"id="editor1" [config]="editorConfig"  [(ngModel)]="contenu"></angular-editor>
-
-<input type="submit">
-
+  <input class="btn btn-main btn-submit tg g" type="submit" value="Payer" />
 </form>
-
-
-<mat-form-field appearance="standard">
-  <mat-label></mat-label>
-  <mat-select multiple>
-    <mat-optgroup *ngFor="let th of tranchesHoraires$ | async" label="{{th.debut}} h">
-      <mat-option *ngFor="let z of zones$ |async">{{z.nom}}</mat-option>
-    </mat-optgroup>
-    </mat-select>
-
-</mat-form-field>

@@ -30,3 +30,39 @@ select {
   text-align: center;
 
 }
+
+.btn-submit{
+  background: linear-gradient(180deg, #6246EA 0%, rgba(98, 70, 234, 0.8) 100%);
+background-blend-mode: multiply;
+border-radius: 20px;
+position: sticky;
+left: 46%;
+right: 50%;
+}
+
+.btn{
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 70%;
+}
+
+.toogle{
+width: 20%;
+margin: auto;
+background: rgba(209, 209, 233, 0.8);
+/* Shadow-card */
+opacity: 1;
+box-shadow: 12px 15px 15px #D1D1E9;
+border-radius: 25px;
+position: absolute;
+top: 30%;
+left: 40%;
+right: 40%;
+}
+.tg
+{
+  display:none;
+}
+
+

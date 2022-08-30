@@ -3,29 +3,34 @@ import { NgForm } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { Observable } from 'rxjs';
 import { Tarif } from 'src/app/business/tarif';
+import { Annonce } from 'src/app/business/annonce';
+
 import { TrancheHorraire } from 'src/app/business/tranche-horraire';
 import { Zone } from 'src/app/business/zone';
 import { TrancheHoraireService } from 'src/app/services/tranche-horaire.service';
 import { ZoneService } from 'src/app/services/zone.service';
+import { UtilisateurService } from 'src/app/services/utilisateur.service';
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css'],
 })
 export class EditorComponent implements OnInit {
-  contenu!: string;
+  annonce: Annonce = new Annonce();
 
   zones$!: Observable<Zone[]>;
   tranchesHoraires$!: Observable<TrancheHorraire[]>;
 
-  constructor(private zoneService : ZoneService, private tranchesHorairesService : TrancheHoraireService) {
-
-  }
+  constructor(
+    private zoneService: ZoneService,
+    private tranchesHorairesService: TrancheHoraireService,
+    private userservice: UtilisateurService
+  ) {}
 
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '500px',
+    height: '400px',
     minHeight: '0',
     maxHeight: 'auto',
     width: 'auto',
@@ -64,11 +69,31 @@ export class EditorComponent implements OnInit {
   };
 
   ngOnInit(): void {
-this.zones$ = this.zoneService.getZones();
-this.tranchesHoraires$ = this.tranchesHorairesService.getTranchesHorraires();
+    this.zones$ = this.zoneService.getZones();
+    this.tranchesHoraires$ =
+      this.tranchesHorairesService.getTranchesHorraires();
   }
 
   submit(form: NgForm) {
-console.log(form.value);
+    console.log(form.value);
+    console.log(this.annonce);
+    this.annonce.idClient = 3;
+    this.userservice.sendAnnonce(this.annonce)
+  }
+
+  pushTh(th: TrancheHorraire) {
+    this.annonce.trancheHorraires.push(th);
+  }
+
+  pushZoneandTH(z: Zone, th: TrancheHorraire) {
+    this.annonce.zones.push(z);
+    this.annonce.trancheHorraires.push(th);
+  }
+
+  toogle() {
+    let x = document.querySelectorAll('.tg');
+    x.forEach((i) => {
+      i.classList.toggle('tg');
+    });
   }
 }

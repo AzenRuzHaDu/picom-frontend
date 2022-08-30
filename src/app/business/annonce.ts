@@ -16,7 +16,7 @@ export class Annonce {
   cryptogramme!:string;
   montantRegleEnEuros!:number;
   client!:Client;
-  zones!:Zone[];
-  trancheHorraires!:TrancheHorraire[];
-
+  zones :Zone[] = [];
+  trancheHorraires:TrancheHorraire[] = [];
+  idClient !: number;
 }
