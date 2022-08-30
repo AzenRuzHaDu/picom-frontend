@@ -25,21 +25,19 @@ return this.clientHttp.get<any[]>(`http://localhost:8180/api/${pathToApi}`)
 
 
   addOne(objectToAdd:any, apiPath : string): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    }
+    // const httpOptions = {
+    //   headers: new HttpHeaders({'Content-Type': 'application/json'})
+    // }
 
-    return this.clientHttp.post<any>(`http://localhost:8180/api/${apiPath}`, objectToAdd, httpOptions).pipe(
-      catchError((error) => this.handleError(error, undefined))
-    );
+    return this.clientHttp.post<any>(`http://localhost:8180/api/${apiPath}`, objectToAdd)
+    ;
   }
+  //.pipe(catchError((error) => this.handleError(error, undefined))
 
   private handleError(error: Error, errorValue: any) {
     return of(errorValue);
   }
 
-  addOnewithBody(){
 
-  }
 }
 
