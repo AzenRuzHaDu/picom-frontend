@@ -10,13 +10,11 @@ import { TarifService } from 'src/app/services/tarif.service';
 })
 
 export class ScreenAddAnnonceComponent implements OnInit {
-  tarifs: Tarif[] = [];
 
-  constructor(private service: TarifService) {}
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.service.getTarifs().subscribe((data) => {
-      this.tarifs = data;
-    });
+
   }
 }

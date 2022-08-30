@@ -18,7 +18,8 @@ import { MapComponent } from './component/screen-list-annonces/map/map.component
 import { ScreenAddAnnonceComponent } from './component/screen-add-annonce/screen-add-annonce.component';
 import { EditorComponent } from './component/screen-add-annonce/editor/editor.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-
+import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     FormsModule,
     HttpClientModule,
     AngularEditorModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

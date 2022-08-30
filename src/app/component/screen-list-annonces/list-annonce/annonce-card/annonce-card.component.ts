@@ -11,10 +11,6 @@ export class AnnonceCardComponent implements OnInit {
   @Input()
   annonce!:Annonce;
 
-  constructor() {
-
-   }
-
   ngOnInit(): void {
     console.log(this.annonce);
   }

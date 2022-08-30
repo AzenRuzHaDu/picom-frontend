@@ -1,22 +1,18 @@
-
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Tarif } from '../business/tarif';
+import { Zone } from '../business/zone';
 import { HttpclientserviceService } from './httpclientservice.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TarifService {
+export class ZoneService {
 
   constructor(private http: HttpclientserviceService) {}
 
-  getTarifs(): Observable<Tarif[]> {
-return this.http.getAll('tarifs');
-  }
 
-
-
-
+  getZones(): Observable<Zone[]> {
+    return this.http.getAll('zones');
+      }
 
 }

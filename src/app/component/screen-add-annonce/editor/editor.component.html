@@ -6,28 +6,34 @@
   </div>
   <div>
     <label for="select">
-      <select name="select" id="select">
-        <option value="Tranche horaire">Tranche horaire</option>
+    <select name="select" id="select" multiple>
+        <optgroup *ngFor="let th of tranchesHoraires$ | async" label="{{th.debut}} h">
+
+            <option *ngFor="let z of zones$ |async">{{z.nom}}</option>
+      </optgroup>
       </select>
     </label>
   </div>
-    <div>
-      <label for="zone">
-        <select name="select" id="select">
-          <option value="Zone">Zone</option>
-        </select>
-      </label>
-    </div>
-
   <div>
-    <input type="date" />
+    <input type="date" [(ngModel)]="contenu"/>
   </div>
   <div>
     <input type="date" name="" id="" />
   </div>
 </div>
-<angular-editor name="annonceContent"id="editor1" [config]="editorConfig"  [(ngModel)]="annonceContent"></angular-editor>
+<angular-editor name="contenu"id="editor1" [config]="editorConfig"  [(ngModel)]="contenu"></angular-editor>
 
 <input type="submit">
 
 </form>
+
+
+<mat-form-field appearance="standard">
+  <mat-label></mat-label>
+  <mat-select multiple>
+    <mat-optgroup *ngFor="let th of tranchesHoraires$ | async" label="{{th.debut}} h">
+      <mat-option *ngFor="let z of zones$ |async">{{z.nom}}</mat-option>
+    </mat-optgroup>
+    </mat-select>
+
+</mat-form-field>

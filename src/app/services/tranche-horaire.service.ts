@@ -1,22 +1,15 @@
-
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Tarif } from '../business/tarif';
+import { TrancheHorraire } from '../business/tranche-horraire';
 import { HttpclientserviceService } from './httpclientservice.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class TarifService {
-
+export class TrancheHoraireService {
   constructor(private http: HttpclientserviceService) {}
 
-  getTarifs(): Observable<Tarif[]> {
-return this.http.getAll('tarifs');
+  getTranchesHorraires(): Observable<TrancheHorraire[]> {
+    return this.http.getAll('tranchesHoraires');
   }
-
-
-
-
-
 }

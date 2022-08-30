@@ -17,7 +17,7 @@ annonces$!: Observable<Annonce[]>;
 
 
   ngOnInit(): void {
-    this.annonces$ = this.user.getOne();
+    this.annonces$ = this.user.getAnnonces();
   }
 
 }
